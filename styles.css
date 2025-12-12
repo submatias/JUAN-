@@ -1,0 +1,1186 @@
+/* Variables y Reset Básico */
+:root {
+    /* Nueva paleta con fondo blanco */
+    --primary-color: #007bff; /* Azul vibrante para CTA principal/iconos */
+    --secondary-color: #858585; /* Color de énfasis alternativo (amarillo) */
+    --background-light: #f1f1f1; /* Fondo principal BLANCO */
+    --background-dark: #f8f9fa; /* Fondo ligeramente gris para secciones alternas */
+    --text-dark: #000000; /* Color de texto principal (negro oscuro) */
+    --text-light: #495057; /* Texto secundario/descripciones */
+    --notice-bg: #dc3545; /* Rojo para el aviso importante */
+    --notice-text: white;
+    --section-padding: 5px;
+    --max-width: 1000px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark); /* Texto oscuro para el fondo claro */
+    background-color: var(--background-light); /* Fondo BLANCO */
+    line-height: 1.6;
+}
+
+.container h3 strong
+{color:rgb(228, 0, 0);
+    padding-top: 20px;
+}
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 15px 15px;
+}
+
+.container-boxprice {
+    max-width: var(--max-width);
+    margin:  auto;
+    margin-bottom: 40px;
+    padding: 15px 15px ;
+    background-color: #dfdfdf;
+    border-radius: 50px;
+    
+}
+
+.container-boxprice h1 {
+    font-size: 2.5rem;
+}
+.container-boxprice h3 {
+    font-size: 1.5rem;
+}
+.container-boxprice p {
+ 
+ font-size: 1.5rem;
+}
+.button-price{
+background-color: #ff0019;
+color: #ffffff;
+border-radius: 50px;
+margin: 0;
+padding: 5px 30px 5px 30px;
+display: inline;
+font-weight: bold;
+position: relative;
+bottom: -35px;
+font-size: 4rem;
+}
+.subtitle{
+    padding-top: 10px;
+}
+
+.subtituloldx{
+font-size: 1.5rem;
+}
+
+/* ------------------------------------------- */
+/* Bloque 1: Cabecera y VSL */
+/* ------------------------------------------- */
+header.block-1 {
+    text-align: center;
+    padding: var(--section-padding);
+    background-color: var(--background-light); /* Asegura que el header sea blanco */
+    padding-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark); /* Título en color oscuro */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+header.block-1 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+
+.vsl-container {
+    margin: 30px auto; /* Asegura el centrado */
+    max-width: 100%; /* Asegura que no se salga */
+    max-height: 100%; /* Asegura que no se salga */
+    position: relative;
+    padding-bottom: 53%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    /* --- ESTILOS AGREGADOS/MODIFICADOS PARA EL MARCO --- */
+    background: #000; /* Fondo negro */
+   
+    
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.8); /* Sombra roja sutil para resaltar */
+    /* -------------------------------------------------- */
+}
+
+.vsl-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.vsl-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.important-notice {
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.30rem;
+    animation: pulse 1.5s infinite;
+
+}
+.important-notice strong {
+    color: rgb(228, 0, 0);
+
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Botones CTA */
+.cta-button {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.8rem;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+}
+
+.euro {
+    font-size: 115%;
+}
+.secondary-cta {
+    background-color: var(--secondary-color); /* Amarillo */
+    color: var(--background-light); /* Texto oscuro en el botón amarillo */
+    border: none;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.secondary-cta:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------------------- */
+/* Bloque 2: Puntos Clave */
+/* ------------------------------------------- */
+.block-2 {
+    background-color: var(--background-dark); /* Fondo ligeramente gris */
+    background-image: url('IMAGENES/21\ fondo.png');
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Opcional: fija la imagen para efecto parallax */
+    
+    /* PROPIEDADES CLAVE PARA CENTRAR Y PONER BORDE */
+    max-width: 1200px;
+    margin: 0 auto; /* ⬅️ ESTO CENTRA EL BLOQUE EN LA PANTALLA */
+    border: 5px solid var(--secondary-color); /* ⬅️ Añade un borde visible */
+    border-radius: 50px; 
+    /* ------------------------------------------- */
+
+    padding: var(--section-padding);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.block-2 h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.block-2 .section-description {
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+
+.pain-point-box {
+    /* Fondo oscuro para asegurar la visibilidad en todos los dispositivos */
+    background-image: url('IMAGENES/patron-oscuro.png'); /* Ruta de tu imagen de fondo/patrón */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Texto blanco para contraste */
+    padding: 30px;
+    margin-bottom: 50px; /* Espacio debajo de la caja */
+    text-align: center;
+}
+
+.pain-point-title {
+    background-color: var(--notice-bg); /* Rojo de la cabecera */
+    color: var(--notice-text); /* Texto blanco */
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 10px; /* Redondeado en la cabecera roja */
+    margin-bottom: 20px;
+}
+
+.pain-point-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.pain-point-subtitle strong {
+    color: var(--notice-bg); /* Opcional: para destacar la frase "esto no es para ti" */
+}
+
+.pain-points-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.pain-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+}
+
+.pain-list li {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.cross-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.pain-point-footer {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- RESPONSIVIDAD PARA EL BLOQUE DE DOLOR --- */
+@media (max-width: 768px) {
+    .pain-points-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+    .pain-point-title {
+        font-size: 1.5rem;
+    }
+    .pain-point-subtitle {
+        font-size: 1rem;
+    }
+}
+
+.key-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 40px auto;
+  max-width: 900px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.key-benefits li {
+  background-color: var(--background-light); /* Fondo blanco para las cajas de beneficios */
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  color: var(--text-dark); /* Asegura que el texto sea oscuro */
+  box-shadow: 4px 4px 4px 4px rgba(139, 139, 139, 0.4);
+}
+
+.key-benefits .icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+  width: 35px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-benefits strong {
+  display: inline-block;
+  min-width: 230px;
+}
+
+
+/* ------------------------------------------- */
+/* Bloque 3: Contenido del Curso */
+/* ------------------------------------------- */
+.block-3 {
+    padding: var(--section-padding);
+    text-align: center;
+    background-color: var(--background-light); /* Fondo blanco */
+    
+}
+
+.block-3 img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    display: block; /* La convierte en un elemento de bloque */
+    margin: 0 auto 30px auto; /* Centra el bloque horizontalmente (auto) y añade margen debajo */
+}
+
+.block-3 h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    
+}
+.text-black {
+    background-color: #000;
+    color: #f1f1f1;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0px 20px;
+    font-size: 1.4rem;
+}
+.course-content {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.course-content strong {
+    align-items: center;
+    padding-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.1rem;
+    min-width: 230px; 
+    color: var(--text-dark);
+}
+
+.course-content li {
+    border-bottom: 1px solid #dee2e6; /* Línea separadora clara */
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+.course-content li:last-child {
+    border-bottom: none;
+}
+
+.course-content .icon {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--primary-color); /* Iconos en azul principal */
+    flex-shrink: 0;
+}
+
+/* ------------------------------------------- */
+/* Bloque 4 & 5: Casos de Éxito y Testimonios */
+/* ------------------------------------------- */
+.block-4-5 {
+    background-color: var(--background-dark); /* Fondo ligeramente gris */
+    padding: var(--section-padding);
+    text-align: center;
+}
+
+.block-4-5 strong {
+    color: #dc3545;
+}
+
+.block-4-5 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.block-4-5 ul li {
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px){
+   .block-4-5 ul li {
+   font-size: 1.2rem;
+}
+}
+
+.block-4-5 div img {
+  margin-top: -170px;
+}
+
+.success-photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #ced4da; /* Gris claro */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.testimonial-videos {
+    margin-bottom: 40px;
+}
+
+.video-placeholder {
+    height: 250px;
+    background-color: #ced4da; /* Gris claro */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+}
+/* Estilos para la cuadrícula de testimonios de video */
+.video-testimonials-grid {
+    display: flex; /* Para ponerlos uno al lado del otro en escritorio */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Contenedor individual del video para la relación de aspecto vertical (9:16) */
+.video-wrapper {
+    flex: 1; /* Ocupa el mismo espacio que los otros */
+    width: 33.33%; /* Aproximadamente un tercio */
+    position: relative;
+    padding-top: 55.77%; /* Hack para relación de aspecto 9:16 (9/16 * 100% = 177.77%) */
+    overflow: hidden;
+    border:#dc3545 5px;
+    border-style: solid;
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.container-VIDEOS {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: #000000;
+    border-radius: 50px;
+}
+
+.container-VIDEOS p {
+text-align: center;
+width: 100%;
+font-size: 2.4rem;
+font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Extra-Bold, para el máximo impacto */
+}
+.container-VIDEOS p strong {
+color: #dc3545;
+
+}
+
+
+/* Media Query para Móviles (Asegura que cada video ocupe el 100% y se apile) */
+@media (max-width: 768px) {
+
+    .block-15{
+        background-color: #000;
+    }
+    /* Desactivamos el flex para que los videos se apilen */
+    .video-testimonials-grid {
+        flex-direction: column;
+        gap: 0; /* Sin espacio entre ellos para el efecto "deslizamiento" o apilamiento */
+    }
+    .video-wrapper {
+    flex: 1; /* Ocupa el mismo espacio que los otros */
+    width: 33.33%; /* Aproximadamente un tercio */
+    position: relative;
+    padding-top: 177.77%; /* Hack para relación de aspecto 9:16 (9/16 * 100% = 177.77%) */
+    overflow: hidden;
+    background: #000;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+    /* En móvil, cada video ocupa el 100% del ancho */
+    .video-wrapper {
+        width: 100%;
+        margin-bottom: 20px; /* Agrega un pequeño espacio entre videos apilados */
+        /* Mantenemos la relación de aspecto 9:16 */
+    }
+}
+
+/* Eliminamos el estilo anterior de .testimonial-videos si no se usa */
+.testimonial-videos {
+    margin-bottom: 0; /* Lo ajustamos dentro del nuevo contenedor */
+}
+/* ------------------------------------------- */
+/* Bloque 6: Quién soy yo */
+/* ------------------------------------------- */
+.block-6 {
+    background-color: var(--background-dark); /* Fondo ligeramente gris */
+    background-image: url('IMAGENES/21\ fondo.png');
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Opcional: fija la imagen para efecto parallax */
+    
+    /* PROPIEDADES CLAVE PARA CENTRAR Y PONER BORDE */
+    max-width: 1200px;
+    margin: 0 auto; /* ⬅️ ESTO CENTRA EL BLOQUE EN LA PANTALLA */
+
+    border-radius: 50px; 
+    /* ------------------------------------------- */
+
+    padding: var(--section-padding);
+    text-align: center;
+    padding-top: 40px;
+    color: #f1f1f1;
+}
+.block-6 img {
+    margin-top: -80px;
+}
+.block-6 h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--secondary-color); /* Título en amarillo */
+}
+
+.bio-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.b6-titulo{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.bio-text {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.bio-text p {
+    margin-bottom: 15px;
+}
+
+.bio-text strong {
+    color: #f1f1f1;
+}
+
+
+/* ------------------------------------------- */
+/* Bloque 7: Preguntas Frecuentes */
+/* ------------------------------------------- */
+.block-7 {
+    background-color: var(--background-dark); /* Fondo ligeramente gris */
+    padding: var(--section-padding);
+    text-align: center;
+}
+
+.block-7 h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.faq-item {
+    text-align: left;
+    background-color: var(--background-light); /* Fondo blanco para FAQ */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-item label {
+    display: block;
+    padding: 15px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    color: var(--text-dark);
+}
+
+.faq-item label::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.faq-item input[type="checkbox"]:checked + label::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.faq-content {
+    max-height: 0;
+    padding: 0 20px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow: hidden;
+    color: var(--text-light); /* Texto de respuesta en gris */
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 200px;
+    padding: 10px 20px 20px 20px;
+}
+
+.faq-content p {
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Footer oscuro para contraste */
+    color: #ced4da; /* Color de texto claro */
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.8rem;
+}
+
+/* Contenedor de enlaces: Usamos la etiqueta p para Flexbox */
+footer .container p {
+    display: flex; 
+    flex-direction: column; /* Esto apila los enlaces verticalmente */
+    align-items: center; /* Centra los enlaces horizontalmente */
+    margin: 0; /* Asegura que no haya márgenes no deseados */
+    padding: 0;
+}
+
+/* Estilos para los enlaces individuales del footer */
+footer a {
+    color: #ced4da; /* Color claro para que se lea en el fondo oscuro */
+    text-decoration: none; 
+    padding: 5px 10px; /* Espaciado vertical y horizontal para el toque */
+    display: inline-block; /* Permite aplicar padding correctamente */
+    transition: color 0.3s, text-decoration 0.3s;
+    font-size: 0.9rem; 
+}
+
+/* Efecto Hover, usando el color de énfasis de la paleta (Rojo) */
+footer a:hover {
+    color: var(--secondary-color); /* Rojo de la variable --secondary-color (#be0b0b) */
+    text-decoration: underline;
+}
+
+/* ------------------------------------------- */
+/* Media Queries para Responsividad */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header .subtitle {
+        font-size: 1rem;
+    }
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
+    .key-benefits li,
+    .course-content li {
+        font-size: 1rem;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .key-benefits strong {
+        text-align: center;
+        align-items: center;
+        min-width: auto;
+        margin-bottom: 10px;
+    }
+
+    .key-benefits li {
+        align-items: center;
+    }
+
+    .key-benefits .icon {
+        margin-bottom: 8px;
+    }
+
+    .success-photos {
+        justify-content: center;
+    }
+    .photo-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+    .bio-content {
+        flex-direction: column;
+    }
+    .bio-image-placeholder {
+        margin: 0 auto 20px auto;
+    }
+    .bio-text {
+        text-align: left; 
+    }
+}
+
+/* Color de énfasis para la clase remark (viral/90 días) */
+.remark {
+   color: #dc3545; /* Rojo de aviso para un alto contraste en el fondo blanco */
+}
+
+.block-11 {
+    background-color: var(--background-dark); /* Fondo ligeramente gris */
+    background-image: url('IMAGENES/21\ fondo.png');
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Opcional: fija la imagen para efecto parallax */
+    
+    /* PROPIEDADES CLAVE PARA CENTRAR Y PONER BORDE */
+    max-width: 1200px;
+    margin: 0 auto; /* ⬅️ ESTO CENTRA EL BLOQUE EN LA PANTALLA */
+
+    border-radius: 50px; 
+    /* ------------------------------------------- */
+
+    padding: var(--section-padding);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.block-11 h1 {
+font-size: 3.5rem;
+color: rgb(202, 7, 7);
+}
+
+.block-11 p{
+
+color: rgb(255, 255, 255);
+font-size: 1.4rem;
+}
+
+
+
+.guarantee-box {
+    max-width: 800px;
+    margin: 0 auto; /* Centra la caja en la pantalla */
+    padding: 40px;
+    
+    /* ESTILOS DEL MARCO */
+    border: 5px solid var(--notice-bg); /* Borde rojo prominente */
+    border-radius: 20px 0px 20px 0px; /* Esquinas redondeadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para levantar la caja */
+}
+.container-baul {
+
+display: flex;
+max-width: var(--max-width);
+margin: 0 auto;
+padding: 0;
+}
+
+.container-baul img{
+max-width: 28%;
+}
+
+.container-textbaul{
+
+margin: auto;
+text-align: center;
+line-height: 1.8rem;
+
+}
+.container-textbaul h1 strong{
+    color: #dc3545;
+}
+
+
+/* ==================================== */
+/* ESTILOS DEL BLOQUE DE COMPARACIÓN */
+/* ==================================== */
+
+.comparison-section {
+    padding: 60px 20px; /* Ajusta el padding lateral si es necesario */
+    text-align: center;
+    background-color: var(--background-light); 
+}
+
+.comparison-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 50px auto; 
+}
+
+.card {
+    flex: 1;
+    min-width: 300px; 
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 50px; /* Bordes muy redondeados */
+    /* Usamos un degradado para el fondo de las tarjetas, más similar al diseño de la imagen */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 600; /* Letra un poco más gruesa */
+}
+
+/* --- ESTILO PARA EL BLOQUE NO ES PARA TI (Fondo Negro) --- */
+
+.not-for-you-card {
+    background-color: var(--text-dark); /* Fondo negro/oscuro */
+    color: white; /* Texto de la lista blanco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.not-for-you-card h2 {
+    color: #e60023; /* Rojo para el título */
+    text-transform: uppercase;
+    border-bottom: none; /* Quitamos la línea para este fondo */
+    justify-content: center;
+}
+
+/* Iconos de la lista (X roja) */
+.not-for-you-card ul li::before {
+    content: "❌"; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1em;
+}
+
+
+/* --- ESTILO PARA EL BLOQUE SÍ ES PARA TI (Fondo Gris Claro) --- */
+
+.for-you-card {
+    background-color: #d6d3d3; /* Fondo gris muy claro */
+    color: var(--text-dark); /* Texto de la lista oscuro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.for-you-card h2 {
+    color: #28a745; /* Verde para el título */
+    text-transform: uppercase;
+    border-bottom: none;
+    justify-content: center;
+}
+
+/* Iconos de la lista (Check verde) */
+.for-you-card ul li::before {
+    content: "✅"; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1em;
+}
+
+/* --- ESTILO PARA EL BOTÓN CTA INFERIOR --- */
+
+.cta-comparison-button {
+    display: inline-block;
+    padding: 15px 40px;
+    margin-top: 20px; 
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white; 
+    border: none;
+    
+    /* Degradado del color de la imagen: de un rojo vibrante a un naranja rojizo */
+    background: linear-gradient(to right, #e60023, #ff5733); 
+    box-shadow: 0 8px 15px rgba(230, 0, 35, 0.4); 
+    
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-comparison-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(230, 0, 35, 0.6);
+}
+
+.cta-comparison-button .arrow {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+
+
+/* --- Media Query para Responsividad (Apilar en pantallas pequeñas) --- */
+@media (max-width: 768px) {
+    .comparison-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%; 
+        width: 100%;
+        margin: 15px auto;
+    }
+}
+
+/* ==================================== */
+/* ESTILOS DEL CONTENEDOR DE VIDEOS */
+/* ==================================== */
+.container-VIDEOS {
+    max-width: var(--max-width); /* */
+    margin: 0 auto; /* */
+    /* El fondo del título ya está en .testimonial-title-box */
+}
+
+/* Contenedor del Título */
+.testimonial-title-box {
+    background-color: var(--text-dark); /* Fondo negro para el título */
+    color: white; /* Texto blanco por defecto */
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 50px 50px 0 0; /* Bordes superiores redondeados */
+    margin-bottom: 30px;
+}
+
+.testimonial-title-box span {
+    display: block; /* Para que cada línea ocupe su propio espacio */
+    font-family: 'Poppins', sans-serif; /* */
+    font-weight: 900; /* Extra-Bold para impacto */
+    text-transform: uppercase;
+    line-height: 1; /* Elimina espacio vertical excesivo */
+    margin: 0;
+}
+
+/* Línea Roja (ESTO ES LO QUE DICEN) */
+.testimonial-title-box .title-line-red {
+    color: var(--notice-bg); /* Rojo vibrante */
+    font-size: 2.5rem; 
+    letter-spacing: 2px;
+}
+
+/* Línea Blanca (LOS MIEMBROS) */
+.testimonial-title-box .title-line-white {
+    color: white; 
+    font-size: 3.5rem; 
+    letter-spacing: 4px;
+    padding-top: 5px;
+}
+
+/* Media Query para Responsividad */
+@media (max-width: 768px) {
+    .testimonial-title-box {
+        padding: 15px 0;
+    }
+    
+    .testimonial-title-box .title-line-red {
+        font-size: 1.5rem; 
+        letter-spacing: 1px;
+    }
+
+    .testimonial-title-box .title-line-white {
+        font-size: 2.5rem; 
+        letter-spacing: 2px;
+    }
+}
+
+/* El estilo de la cuadrícula de videos debajo lo mantienes como está. */
+
+@media (max-width: 768px) {
+
+
+.block-2,
+.block-6,
+.block-11 {
+max-width: 100%;
+border-radius: 20px;
+margin: 0 10px;
+}
+
+
+.block-2,
+.block-6,
+.block-11 {
+background-attachment: scroll !important;
+}
+
+
+.block-11 h1,
+.testimonial-title-box .title-line-white {
+font-size: 2rem !important;
+}
+.testimonial-title-box .title-line-red {
+font-size: 1.3rem !important;
+}
+
+.block-11 div p {
+    font-size: 0.9rem;
+
+}
+.cta-button {
+font-size: 1.3rem !important;
+padding: 15px 20px;
+border-radius: 20px;
+max-width: 90%;
+}
+
+
+img {
+max-width: 100%;
+height: auto !important;
+}
+
+
+.pain-points-grid {
+flex-direction: column;
+gap: 10px;
+text-align: left;
+}
+
+
+.container-baul {
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.container-baul img {
+max-width: 90%;
+margin-bottom: 20px;
+}
+.container-textbaul {
+width: 100%;
+}
+
+
+.video-wrapper {
+width: 100% !important;
+padding-top: 174% !important;
+border-radius: 30px 0px 30px 0px !important;
+}
+.video-testimonials-grid {
+flex-direction: column !important;
+gap: 10px !important;
+}
+
+.container-VIDEOS{
+    border-radius: 10px;
+}
+
+
+.block-3 h2,
+.block-4-5 h1,
+header h1 {
+font-size: 1.6rem !important;
+line-height: 1.3;
+}
+
+
+.text-black {
+font-size: 1.0rem !important;
+padding: 5px 15px;
+}
+
+
+.comparison-grid {
+flex-direction: column;
+}
+
+
+
+.card {
+max-width: 100%;
+padding: 20px;
+}
+
+
+.faq-item label {
+font-size: 1rem;
+}
+}
