@@ -2,7 +2,7 @@
 :root {
     /* Nueva paleta con fondo blanco */
     --primary-color: #007bff; /* Azul vibrante para CTA principal/iconos */
-    --secondary-color: #858585; /* Color de énfasis alternativo (amarillo) */
+    --secondary-color: #ff0000; /* Color de énfasis alternativo (amarillo) */
     --background-light: #f1f1f1; /* Fondo principal BLANCO */
     --background-dark: #f8f9fa; /* Fondo ligeramente gris para secciones alternas */
     --text-dark: #000000; /* Color de texto principal (negro oscuro) */
@@ -34,6 +34,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 15px 15px;
+    
 }
 
 .container-boxprice {
@@ -43,6 +44,8 @@ body {
     padding: 15px 15px ;
     background-color: #dfdfdf;
     border-radius: 50px;
+    text-align: center;
+    
     
 }
 
@@ -216,7 +219,7 @@ header.block-1 img {
 
     padding: var(--section-padding);
     text-align: center;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 .block-2 h2 {
@@ -247,10 +250,12 @@ header.block-1 img {
     color: var(--notice-text); /* Texto blanco */
     font-size: 2rem;
     font-weight: 700;
+    font-style: italic;
     padding: 10px 30px;
     display: inline-block;
     border-radius: 10px; /* Redondeado en la cabecera roja */
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+
 }
 
 .pain-point-subtitle {
@@ -279,7 +284,7 @@ header.block-1 img {
 
 .pain-list li {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;   MARGEN DE LISTA*/
     display: flex;
     align-items: flex-start;
 }
@@ -450,8 +455,8 @@ header.block-1 img {
 }
 
 .block-4-5 div img {
-  margin-top: -170px;
-}
+  margin-top: -70px;
+} /* CONTENEDOR DE IMAGEN PARA QUE QUEDE SOBRE LA IMAGEN*/
 
 .success-photos {
     display: flex;
@@ -541,6 +546,20 @@ color: #dc3545;
 
     .block-15{
         background-color: #000;
+    }
+
+    .ocultar-en-movil{
+        display: none;
+    }
+    
+
+    .block-12 .container{ 
+        padding: 0;
+    }
+
+    .block-12 .container img{ 
+      max-width: 110%;
+      margin-bottom: 45px;
     }
     /* Desactivamos el flex para que los videos se apilen */
     .video-testimonials-grid {
@@ -699,7 +718,7 @@ color: #dc3545;
 
 /* Footer */
 footer {
-    background-color: #343a40; /* Footer oscuro para contraste */
+    background-color: #000000; /* Footer oscuro para contraste */
     color: #ced4da; /* Color de texto claro */
     text-align: center;
     padding: 30px 0;
@@ -781,7 +800,12 @@ footer a:hover {
         margin: 0 auto 20px auto;
     }
     .bio-text {
-        text-align: left; 
+        text-align: center; 
+        font-size: 0.9rem;
+    }
+
+    .bio-text h3 strong{
+        color: #ffffff;
     }
 }
 
@@ -840,9 +864,7 @@ margin: 0 auto;
 padding: 0;
 }
 
-.container-baul img{
-max-width: 28%;
-}
+
 
 .container-textbaul{
 
@@ -1054,10 +1076,30 @@ line-height: 1.8rem;
     padding-top: 5px;
 }
 
+.titulo {
+    font-size: 2rem;
+    color: #dc3545;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+.block-7 div h1 strong {
+    color: red;
+}
+
+.block-7 div h1 {
+ font-size: 3rem;
+}
+
+.pain-list li.mini-text {
+    font-size: 0.8rem; /* ¡Este valor ganará! */
+     margin-bottom: 20px;
+     color: #495057;
+}
 /* Media Query para Responsividad */
 @media (max-width: 768px) {
     .testimonial-title-box {
-        padding: 15px 0;
+        padding: 15px 0 100px;
     }
     
     .testimonial-title-box .title-line-red {
@@ -1069,6 +1111,32 @@ line-height: 1.8rem;
         font-size: 2.5rem; 
         letter-spacing: 2px;
     }
+}
+
+
+.check-icon-wrapper {
+    font-size: 1.3rem; 
+    flex-shrink: 0;
+    height: 1.5rem;
+    align-items: center;
+}
+
+.check-icon {
+    width: 20px; 
+    height: 20px;
+}
+
+.container-baul img {
+justify-content: center;
+max-width:400px;
+width: 30%;
+}
+
+/* Ajuste específico para la lista de "Que incluye Universidad High Ticket" */
+.block-4-5 .pain-list li {
+    display: flex;
+    align-items: flex-start; /* CLAVE */
+    gap: 12px;
 }
 
 /* El estilo de la cuadrícula de videos debajo lo mantienes como está. */
@@ -1101,7 +1169,7 @@ font-size: 1.3rem !important;
 }
 
 .block-11 div p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 
 }
 .cta-button {
@@ -1129,10 +1197,12 @@ text-align: left;
 flex-direction: column;
 align-items: center;
 text-align: center;
+font-size: 0.8rem;
 }
 .container-baul img {
-max-width: 90%;
-margin-bottom: 20px;
+width: 80%;
+margin-left: auto;
+
 }
 .container-textbaul {
 width: 100%;
@@ -1143,6 +1213,7 @@ width: 100%;
 width: 100% !important;
 padding-top: 174% !important;
 border-radius: 30px 0px 30px 0px !important;
+margin-bottom: 200px;
 }
 .video-testimonials-grid {
 flex-direction: column !important;
