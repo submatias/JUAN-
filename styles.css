@@ -444,6 +444,7 @@ header.block-1 img {
     justify-content: center;
     gap: 40px;
     margin-bottom: 30px;
+    margin: auto;
 }
 .block-11 .pain-points-grid h1 {
     color: #000000;
@@ -473,7 +474,9 @@ header.block-1 img {
     font-size: 1.1rem;
     font-weight: 500;
     text-align: center;
-    margin-top: 20px;
+    display: flex;
+    text-align: left;
+    
 }
 
 /* --- RESPONSIVIDAD PARA EL BLOQUE DE DOLOR --- */
@@ -484,10 +487,20 @@ header.block-1 img {
     }
     .pain-point-title {
         font-size: 1.9rem;
+        margin-bottom: 10px;
+        padding-top: 0;
     }
     .pain-point-subtitle {
         font-size: 1rem;
     }
+
+    .pain-point-box{
+        margin-bottom: 0px;
+    }
+
+.block-2 .pain-points-grid .pain-list li{
+    margin-bottom: 20px;
+}
 }
 
 .key-benefits {
@@ -683,7 +696,7 @@ header.block-1 img {
     aspect-ratio: 9 / 16;
     overflow: hidden;
     border: 5px solid #dc3545;
-    border-radius: 20px 0 20px 0;
+    border-radius: px 0 20px 0;
     background: black;
 }
 
@@ -733,8 +746,7 @@ color: #dc3545;
     .block-15{
         background-color: #000000;
         color: #000;
-        padding: 10px;
-        margin-bottom: 20px;     
+        padding: 10px;  
     
     }
 
@@ -982,6 +994,8 @@ footer a:hover {
     .success-photos {
         justify-content: center;
     }
+
+
 
 .block-3 img {
     margin :0;
@@ -1325,6 +1339,7 @@ line-height: 1.8rem;
     flex-shrink: 0;
     height: 1.5rem;
     align-items: center;
+    padding-right: 20px;
 }
 
 .check-icon {
@@ -1402,13 +1417,14 @@ height: auto !important;
 
 .pain-points-grid {
 flex-direction: column;
-gap: 10px;
 text-align: left;
 padding: 30px;
 background-color: #ffffff;
 border-radius: 50px;
 margin: 10px;
  box-shadow: 0 0 13px rgba(1, 1, 1, 0.8); /* Sombra roja sutil para resaltar */
+ margin-left: 20px !important;
+ margin-right: 20px !important;
 }
 
 .block-2 .pain-points-grid {
@@ -1456,7 +1472,8 @@ gap: 10px !important;
 }
 
 .container-VIDEOS{
-    border-radius: 10px;
+    border-radius: 0px;
+    margin-top: -2px;
 }
 
 
@@ -1492,13 +1509,17 @@ padding: 20px;
 .faq-item label {
 font-size: 1rem;
 }
+.block-11 .pain-points-grid .titulo-paint-grid {
+    margin-top: 40px;
+}
+
 }
 
 .block-11 .pain-points-grid {
     /* Quitamos el 'display: flex' forzado en móvil para dejarlo en una sola columna */
     display: block; 
     max-width: 600px; /* Ancho máximo para la lista */
-    margin: 40px auto; /* Centrar la lista */
+   
     padding: 0; /* Remover padding adicional */
     background-color: transparent; /* No queremos el fondo blanco del móvil aquí */
     box-shadow: none; /* No queremos la sombra del móvil aquí */
@@ -1511,7 +1532,7 @@ font-size: 1rem;
 
 /* Asegurar que el título se mantenga grande y centrado */
 .block-11 .pain-points-grid .titulo-paint-grid {
-    font-size: 3rem; /* Tamaño de escritorio */
+    font-size: 2.0rem; /* Tamaño de escritorio */
     text-align: center;
     margin-bottom: 30px;
 }
@@ -1553,3 +1574,10 @@ font-size: 1rem;
 }
 
 /* Asegurar que el contenido de la lista no se estire demasiado */
+
+.linea-separadora {
+  border: 0;           /* Quita el borde por defecto */
+  height: 1px;         /* Define el grosor */
+  background-color: #d3d3d3; /* Color gris claro */
+  width: 100%;         /* Ancho total */
+}
